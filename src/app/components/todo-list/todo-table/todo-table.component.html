@@ -1,0 +1,24 @@
+
+<section class="todoTable">
+  
+  <ng-container *ngFor="let item of inputData">
+    <app-todo-lis-item *ngIf="!item.completed.boolean" [item]="item" ></app-todo-lis-item>
+    </ng-container>
+  <div *ngIf="completedDataa.length > 0" class="completedButton" (click)="setCompletedIsOpen()">
+    <ng-container *ngIf="completedIsOpen;else arrowDown">
+      <fa-icon [icon]="faArrowDown"></fa-icon>
+    </ng-container>
+    <ng-template #arrowDown>
+      <fa-icon [icon]="faArrowRight"></fa-icon>
+    </ng-template>
+    <p>Completed {{ completedDataa.length }}</p>
+  </div>
+  <div>
+      <div *ngIf="completedIsOpen">
+      <ng-container *ngFor="let item of inputData">
+      <app-todo-lis-item *ngIf="item.completed.boolean == true" [item]="item" ></app-todo-lis-item>
+      </ng-container>
+    </div>
+  </div>
+</section>
+

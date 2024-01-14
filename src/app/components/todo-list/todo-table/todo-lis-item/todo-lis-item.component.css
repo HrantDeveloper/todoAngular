@@ -1,0 +1,60 @@
+.toDoListItem{
+    /* height: 50px; */
+    border-radius: 5px;
+    background-color:#C0C0C0;
+    padding:5px 10px 5px 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    animation: fadeIn 0.3s ease-in-out; 
+    color:black;
+    margin-top: 5px;;
+}
+.toDoListItem:not(:first-child){
+    margin-top: 5px;
+}
+
+.listItemInnerLeft{
+    width: 5%;
+    display: flex;
+}
+.listItemMainInner{
+    margin-left: 10px;
+    width: 95%;
+}
+.topText{
+    height: 20px;
+}
+.itemInfoDiv{
+    width: 100px;
+    display: flex;
+}
+.itemInfoDivDate{
+    margin-left: 10px;
+    width: 150px; 
+}
+.itemInfoDivDateToday{
+    color:blue;
+    width: 150px;
+}
+.icon{
+    width: 25px;
+    height: 45px;
+    cursor: pointer;
+}
+.icon:hover{
+    background-color:white
+}
+.completedName{
+    color:red;
+}
+.listItemInnerRight{
+    
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 5;
+    }
+    }

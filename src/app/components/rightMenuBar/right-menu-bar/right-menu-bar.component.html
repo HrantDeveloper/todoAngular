@@ -1,0 +1,45 @@
+<section class="menuBar">
+    <div class="completeCloseDiv">
+        <app-base-completer-input [item] = "item"></app-base-completer-input>
+      <fa-icon [icon]="faClose" 
+      (click)="closeMenuBar()"
+      class="closeButton"
+      ></fa-icon>
+    </div>
+    <div class="updatingInput">
+      <input
+        type="text"
+        name="updatedName"
+        placeholder={{item.name}}
+        class="updateInput"
+        [(ngModel)]="updatedName"
+        
+      />
+      <button
+      (click)="updateItem( '', 'title')"    
+        class="updateButton"
+      >
+        Update
+      </button>
+    </div>
+    <div class="important">
+      <app-changer-to-important [item]="item" ></app-changer-to-important>
+    </div> 
+    <app-date-changer [item] = "item" [func]="updateItem"></app-date-changer>
+    <div class="deleterDiv">
+      <p>
+        {{item.completed.boolean
+          ? 'Completed' +(item.completed.date) 
+          : 'Created' +(item.date)}}   
+      </p>
+      <div>
+        <fa-icon [icon]="faTrash" 
+      (click)="setModalIsOpen()"
+      class="deleteIcon"
+      ></fa-icon>
+      </div>
+    </div> 
+     <ng-container *ngIf="deleteModal">
+      <app-modal [item]="item"></app-modal>
+    </ng-container>
+  </section>

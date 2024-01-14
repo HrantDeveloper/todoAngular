@@ -1,0 +1,78 @@
+.nav{
+    width: 400px;
+    height: 100vh;
+    padding: 10px 3px 10px 3px ;
+}
+.navMedia{
+    position: absolute;
+    width: 400px;
+    height: 100vh;
+    padding: 10px 3px 10px 3px ;
+    background-color: rgba(255, 255, 255, 1);
+    animation: fadeIn 0.4s ease-in-out; 
+}
+.searchInputDiv{
+    padding-left:15px;
+    padding-right:15px;
+}
+.searchInput{
+    padding-left: 0.5rem;
+    width: 100%;
+    height: 2.3rem ;
+    border-radius: 5px;
+    border-top:0px;
+    border-left:0px;
+    border-right:0px;
+    background-color: #C0C0C0;
+}
+.navBarList{
+    margin-top: 10px;
+}
+.navBarListItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.navBarListItemIsActive{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color:#C0C0C0;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.navBarListItem:not(:first-child){
+    margin-top: 10px;
+}
+.navBarListItem:hover{
+    background-color:#C0C0C0;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 5;
+    }
+    }
+
+
+@media (max-width: 480px) {
+    .nav{
+       display: none;
+    }
+}

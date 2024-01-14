@@ -1,0 +1,27 @@
+<form
+    class="form"
+    (ngSubmit)="onSubmit()" 
+    >
+      <div class="plusIconDiv">
+        <fa-icon class="icon" [icon]="faPlus"></fa-icon>
+      </div>
+       <input 
+       class="input" 
+       type="text" 
+       id="text" 
+       name="text"
+       [(ngModel)] = "name"
+       placeholder="Add Task"
+       
+       >
+       <input
+        class="dateInput"
+        type="date"
+        lang="en"
+        id="start"
+        name="trip-start"
+        min="2023-11-25"
+        max="2123-12-31"
+        [(ngModel)] = "date"
+      />
+    </form>

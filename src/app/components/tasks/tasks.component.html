@@ -1,0 +1,16 @@
+<section
+      class="sectionMyDay">
+      <i class="fa-solid fa-bars" (click)="setMediaMenuIsOpen()"></i>
+      <header class="header">
+        <div className="titleArea" >
+          <h2>Tasks</h2>
+          <p>{{getCurrentDate('long')}}</p>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-compress icon "></i>
+          <i class="fa-solid fa-ellipsis icon" ></i>
+        </div>
+      </header>
+      <app-todo-table [inputData]="tableData" [completedDataa] = "completedArray" class="todoTable"></app-todo-table>
+      <app-add-task-input [page]="page"></app-add-task-input>
+    </section>

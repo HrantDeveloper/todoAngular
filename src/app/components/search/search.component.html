@@ -1,0 +1,12 @@
+<section
+      class="sectionMyDay">
+      <div class="mediaMenu">
+        <i class="fa-solid fa-bars" (click)="setMediaMenuIsOpen()"></i>
+      </div>
+      <header class="header">
+        <div class="icons">
+          <i class="fa-solid fa-ellipsis icon" ></i>
+        </div>
+      </header>
+      <app-todo-table [inputData]="tableData" [completedDataa] = "completedArray" class="todoTable"></app-todo-table>
+    </section>

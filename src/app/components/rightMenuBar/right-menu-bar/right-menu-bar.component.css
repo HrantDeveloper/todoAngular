@@ -1,0 +1,96 @@
+.menuBar{
+    width: 400px;
+    height: 100vh;
+    padding: 10px 10px 10px 10px ;
+    animation: fadeIn 0.4s ease-in-out;
+    /* position: relative; */
+    position: absolute;
+    left: 1090px;
+    background-color:rgba(255, 255, 255, 1);
+    }
+    .closeButton{
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+    .completeCloseDiv{
+    height: 50px;
+    display: flex;
+    justify-content: space-between
+    }
+    .updatingInput{
+      display: flex;
+      color: red;
+    }
+    .updateInput{
+    width: 100%;
+    height: 50px;
+    border:1px solid #C0C0C0;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: larger;
+    }
+    /* .-ms-updateInput-placeholder {
+        color: red;
+      } */
+    .updateButton{
+        margin-left: 10px;
+        width: 150px;
+        border:none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: white;
+    }
+    .updateButton:hover{
+        background-color:#B2BEB5;
+
+    }
+    .icon{
+        width: 25px;
+        height: 45px;
+        cursor: pointer;
+
+    }
+    .icon:hover{
+        background-color:white
+    }
+    .important{
+    height: "50px";
+    display: flex;
+    justify-content: flex-end;
+    border-Radius: 5px;
+    margin-Top: 10px;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    .deleterDiv{
+        height:50;
+        margin-top: 450px;
+        padding-left: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .deleteIcon{
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 5;
+        }
+        }
+
+        @media (max-width: 480px) {
+         .menuBar{
+          position: absolute;
+          left:0px;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 1)
+         }
+      }

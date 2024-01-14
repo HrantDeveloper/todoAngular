@@ -1,0 +1,7 @@
+<div class="mainDiv">
+    <i *ngIf="item && item.important == true; else notImportant" class="fa-solid fa-star" (click)="onImportancyChange()"></i>
+    <ng-template #notImportant>
+      <i class="fa-regular fa-star" (click)="onImportancyChange()"></i>
+    </ng-template>
+
+    </div>

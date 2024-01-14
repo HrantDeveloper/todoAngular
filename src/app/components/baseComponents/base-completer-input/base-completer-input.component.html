@@ -1,0 +1,7 @@
+
+    <div class="mainDiv">
+      <i *ngIf="item && item.completed.boolean; else notCompleted" class="fa-sharp fa-solid fa-circle-check" (click)="onCheckboxChange()"></i>
+      <ng-template #notCompleted>
+        <i class="fa-regular fa-circle-check " (click)="onCheckboxChange()"></i>
+      </ng-template>
+      </div>

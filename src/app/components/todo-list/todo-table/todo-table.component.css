@@ -1,0 +1,20 @@
+.todoTable{
+    margin-top: 30px;
+    height:450px;
+    overflow: auto;
+}
+.completedButton{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    background-color:  #899499;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+}
+.completed:hover{
+    background-color: white;
+}

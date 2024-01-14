@@ -1,0 +1,32 @@
+<nav
+[class.nav]="!showMobileMenu" [class.navMedia]="showMobileMenu"
+>
+<ng-container *ngIf="showMobileMenu ">
+  <i class="fa-solid fa-bars" (click)="setMobileMenuIsOpen()"></i>
+</ng-container>
+    <div class="searchInputDiv">
+      <input
+        type="text"
+        placeholder="Search"
+        class="searchInput"
+        (click)="navigateToSearch()"
+        (input)="onInputChange($event)"
+      />
+    </div>
+
+  <div class="navBarList"
+  >
+    <a
+    *ngFor="let item of navBarData"
+    [routerLink]="['/', item.path]"
+    class="{{isActive !== item.id?'navBarListItem':'navBarListItemIsActive'}}"
+    (click)="changeIsActive(item.id,item.title)"
+    >
+      <div style="display: flex">
+        <!-- {{item.icon}} -->
+        <p style="margin-left: 10px;">{{item.title}}</p>
+      </div>
+      <!-- <p style="width: 30px" >{{navBarQuantity && navBarQuantity[index][1]}}</p> -->
+    </a>
+  </div>
+  </nav>

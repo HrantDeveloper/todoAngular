@@ -1,0 +1,41 @@
+<div class="dateChangerDiv">
+    <div class="dateArea">
+      <p (click)="toggleDateChangerMenu()">
+        {{ item.date ? 'Due ' + (item.date === today ? 'Today' : item.date) : 'Add due date' }}
+      </p>
+      <ng-container *ngIf="item.date">
+        <fa-icon [icon]="faClose"
+        (click)="func('', 'dateDeleter')"
+         class="closeButton">
+       </fa-icon>
+    </ng-container>
+    </div>
+
+    <ng-container *ngIf="calendarIsOpen">
+      <input
+        class="calendarInput"
+        type="date"
+        lang="en"
+        ref={changedDateRef}
+        id="start"
+        name="trip-start"
+        min="2023-11-25"
+        max="2123-12-31"
+        [(ngModel)]="calendarDate"
+        (change)=" dateChangerChooser(item.id)"
+      />
+    </ng-container>
+    <ng-container *ngIf="dateChangerMenuIsOpen ">
+        <div class=appearedDiv>
+            <div class="chooseDateVariants">
+                <div
+                 *ngFor="let item of dateChangerTypesData"
+                  class="chooseDateVariant"
+                  (click)=" dateChangerChooser(item.id)"
+                >
+                  <p>{{item.name}}</p>
+                </div>
+            </div>
+          </div>
+    </ng-container>
+  </div>

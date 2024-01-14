@@ -1,0 +1,31 @@
+
+      
+    
+    <!-- <ChangerToImportant
+      classes={styles.icon}
+      updateItem={updateItem}
+      id={data.id}
+      data={data}
+    /> -->
+
+    <div class="toDoListItem">
+      <div class="listItemInnerLeft">
+        <app-base-completer-input [item] = "item"></app-base-completer-input>
+      </div>
+      <div class="listItemMainInner" (click)="openEditingMenu(item)">
+        <div class="topText">
+          <p [class.completedName]="item.completed.boolean">{{item.name}}</p>
+        </div>
+         
+         <div class="itemInfoDiv">
+          <p class="itemInfoDivType">{{item.type}} .</p>
+            <p [ngClass]="item.date == date ? 'itemInfoDivDateToday' : 'itemInfoDivDate'">
+            {{item.date == date ? "Today" : item.date}}
+          </p>
+        </div>
+      </div>
+      <div class="listItemInnerRight">
+        <app-changer-to-important [item] = "item"></app-changer-to-important>
+      </div>
+    </div>
+  
