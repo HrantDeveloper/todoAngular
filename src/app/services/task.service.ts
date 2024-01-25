@@ -7,7 +7,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:5000/tasks';
+  // private apiUrl = 'http://localhost:5000/tasks'; json/placeholder
+  private apiUrl = 'http://localhost:3000/tasks';
   private dataSubject = new Subject<any>();
    _menuBarIsOpen = new BehaviorSubject<boolean>(false);
   menuBarIsOpen$ = this._menuBarIsOpen.asObservable();

@@ -25,8 +25,9 @@ export class BaseCompleterInputComponent implements OnInit{
         boolean: !this.item.completed.boolean,
       },
     }).subscribe(updatedItem => {
-      this.taskService.notifyDataChanges(updatedItem);
-      this.taskService.setMenuBarData(updatedItem);
+        this.taskService.notifyDataChanges(updatedItem);
+        this.taskService.setMenuBarData(updatedItem);
+
     });
   }
 }

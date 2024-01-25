@@ -1,18 +1,18 @@
 <form
     class="form"
-    (ngSubmit)="onSubmit()" 
+    (ngSubmit)="onSubmit()"
     >
       <div class="plusIconDiv">
         <fa-icon class="icon" [icon]="faPlus"></fa-icon>
       </div>
-       <input 
-       class="input" 
-       type="text" 
-       id="text" 
+       <input
+       class="input"
+       type="text"
+       id="text"
        name="text"
        [(ngModel)] = "name"
        placeholder="Add Task"
-       
+
        >
        <input
         class="dateInput"
