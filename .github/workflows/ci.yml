@@ -20,7 +20,7 @@ jobs:
         run: npm ci
 
       - name: test application
-        run: npm test:prod
+        run: npm run test:prod
 
       - name: build application
-        run: npm build:prod
+        run: npm run build:prod
