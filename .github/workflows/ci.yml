@@ -23,4 +23,4 @@ jobs:
       #     run: npm run test:prod
 
       - name: build application
-        run: npm run build:prod
+        run: npm run build
