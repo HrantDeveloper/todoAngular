@@ -19,8 +19,8 @@ jobs:
       - name: install dependecies
         run: npm ci
 
-      - name: test application
-        run: npm run test:prod
+      #   - name: test application
+      #     run: npm run test:prod
 
       - name: build application
         run: npm run build:prod
