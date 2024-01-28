@@ -24,3 +24,10 @@ jobs:
 
       - name: build application
         run: npm run build
+
+
+      - name: Deploy to Vercel Action
+        uses: BetaHuhn/deploy-to-vercel-action@v1.9.12
+
+
+
