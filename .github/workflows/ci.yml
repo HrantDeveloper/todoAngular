@@ -29,6 +29,7 @@ jobs:
       - name: Deploy to Vercel Action
         uses: BetaHuhn/deploy-to-vercel-action@v1.9.12
         with:
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
